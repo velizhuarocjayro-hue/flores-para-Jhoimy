@@ -1,27 +1,1124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para Jhoimy 🌻💛</title>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:'DM Sans',sans-serif;background:#130d08;color:#fff;overflow-x:hidden}body{min-height:100svh}.bg{position:fixed;inset:0;background:linear-gradient(180deg,rgba(18,11,6,.2),rgba(18,11,6,.82)),url('jhoimy-diseno-final.png') center/cover no-repeat;filter:saturate(.9);transform:scale(1.03);z-index:-3}.glow{position:fixed;inset:0;background:radial-gradient(circle at 50% 25%,rgba(255,197,57,.2),transparent 38%),linear-gradient(180deg,transparent 45%,#120b07 100%);z-index:-2}.petals{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}.petal{position:absolute;top:-40px;font-size:22px;animation:fall linear forwards;filter:drop-shadow(0 4px 5px #0005)}@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(540deg);opacity:.15}}.screen{min-height:100svh;display:none;align-items:center;justify-content:center;padding:28px 18px;text-align:center}.screen.active{display:flex;animation:fade .8s ease}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.card{width:min(92vw,560px);padding:28px 22px;border:1px solid rgba(255,220,122,.28);border-radius:28px;background:linear-gradient(180deg,rgba(39,27,17,.68),rgba(22,14,9,.82));backdrop-filter:blur(10px);box-shadow:0 25px 80px #0008, inset 0 1px 0 #fff1}.eyebrow{letter-spacing:.18em;text-transform:uppercase;color:#ffd86c;font-size:.74rem;font-weight:700}.title{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,10vw,4rem);line-height:1.02;margin:10px 0 12px;text-shadow:0 5px 30px #000}.sub{color:#f5e7cf;line-height:1.65;font-size:1rem}.btn{border:0;margin-top:22px;padding:14px 22px;border-radius:999px;background:linear-gradient(135deg,#ffd95a,#f6ad28);color:#3b2605;font-weight:800;font-size:1rem;box-shadow:0 8px 30px #f4b5284d;cursor:pointer;transition:.2s}.btn:active{transform:scale(.97)}.mini{font-size:.78rem;color:#d6c4a9;margin-top:12px}.hero-img{width:min(78vw,360px);aspect-ratio:1/1;object-fit:cover;border-radius:28px;border:1px solid #ffe59b44;box-shadow:0 20px 60px #0009;margin:8px auto 20px}.message{font-family:'Playfair Display',serif;font-size:clamp(1.28rem,5vw,1.65rem);line-height:1.55;color:#fff8e9;margin:10px 0}.highlight{color:#ffd65b}.progress{display:flex;gap:7px;justify-content:center;margin:18px 0 2px}.dot{width:7px;height:7px;border-radius:50%;background:#ffffff35}.dot.on{background:#ffd65b;box-shadow:0 0 10px #ffd65b}.final-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,11vw,4.5rem);margin:8px 0;color:#ffe075}.signature{margin-top:22px;font-family:'Playfair Display',serif;font-size:1.25rem}.music{position:fixed;right:14px;top:14px;z-index:50;border:1px solid #fff3;background:#1b120bb8;color:#fff;border-radius:999px;padding:9px 12px;font-size:.8rem;backdrop-filter:blur(8px)}.sun{font-size:2.2rem;animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.12)}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600;1,700&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --yellow:#ffd85a;
+    --gold:#f3b51b;
+    --brown:#5b3517;
+    --dark:#1b1208;
+    --cream:#fff8dc;
+}
+
+body{
+    min-height:100vh;
+    font-family:'DM Sans',sans-serif;
+    color:#fff;
+    background:
+      radial-gradient(circle at 50% 10%,rgba(255,197,54,.22),transparent 30%),
+      linear-gradient(135deg,#160e05,#382006 55%,#140c04);
+    overflow-x:hidden;
+}
+
+/* ---------- FONDO ---------- */
+
+.bg{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+      radial-gradient(circle at 15% 20%,rgba(255,207,77,.10),transparent 18%),
+      radial-gradient(circle at 85% 80%,rgba(255,170,0,.12),transparent 25%);
+    z-index:-3;
+}
+
+.glow{
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,192,45,.12);
+    filter:blur(100px);
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:-2;
+}
+
+/* ---------- PÉTALOS ---------- */
+
+#petals{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:50;
+}
+
+.petal{
+    position:absolute;
+    top:-50px;
+    font-size:22px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(115vh) rotate(520deg);
+        opacity:.15;
+    }
+}
+
+/* ---------- MÚSICA ---------- */
+
+.music{
+    position:fixed;
+    right:18px;
+    top:18px;
+    z-index:100;
+    border:1px solid rgba(255,222,125,.45);
+    background:rgba(28,17,6,.78);
+    backdrop-filter:blur(15px);
+    color:#ffe798;
+    border-radius:40px;
+    padding:11px 17px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+}
+
+.music.playing{
+    animation:musicPulse 1.7s infinite;
+}
+
+@keyframes musicPulse{
+    50%{
+        box-shadow:0 0 0 8px rgba(255,209,73,.08);
+    }
+}
+
+/* ---------- PANTALLAS ---------- */
+
+.screen{
+    display:none;
+    min-height:100vh;
+    padding:35px 20px;
+    align-items:center;
+    justify-content:center;
+}
+
+.screen.active{
+    display:flex;
+    animation:screenIn .8s ease;
+}
+
+@keyframes screenIn{
+    from{opacity:0;transform:translateY(18px)}
+    to{opacity:1;transform:none}
+}
+
+.container{
+    width:min(1050px,100%);
+    margin:auto;
+}
+
+/* ---------- PORTADA ---------- */
+
+.hero{
+    width:min(1100px,100%);
+    text-align:center;
+}
+
+.eyebrow{
+    text-transform:uppercase;
+    letter-spacing:4px;
+    color:#ffd96a;
+    font-size:.78rem;
+    margin-bottom:14px;
+}
+
+.title{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(3rem,9vw,6.5rem);
+    font-style:italic;
+    line-height:.95;
+    color:#fff5c7;
+    text-shadow:0 5px 30px rgba(255,181,22,.2);
+}
+
+.subtitle{
+    max-width:620px;
+    margin:25px auto;
+    color:#f4dfbd;
+    font-size:1.08rem;
+    line-height:1.8;
+}
+
+.sun{
+    font-size:55px;
+    animation:sun 3s ease-in-out infinite;
+}
+
+@keyframes sun{
+    50%{transform:rotate(10deg) scale(1.08)}
+}
+
+.btn{
+    border:0;
+    cursor:pointer;
+    padding:15px 30px;
+    border-radius:40px;
+    font-size:1rem;
+    font-weight:700;
+    background:linear-gradient(135deg,#ffe078,#f4b91f);
+    color:#3b2608;
+    box-shadow:0 10px 35px rgba(237,171,17,.25);
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px) scale(1.03);
+}
+
+.btn:active{
+    transform:scale(.97);
+}
+
+/* ---------- IMAGEN PRINCIPAL ---------- */
+
+.image-card{
+    position:relative;
+    width:min(1000px,100%);
+    margin:auto;
+    border-radius:28px;
+    overflow:hidden;
+    border:1px solid rgba(255,222,126,.35);
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+.image-card img{
+    display:block;
+    width:100%;
+}
+
+.image-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding:30px;
+    background:linear-gradient(transparent 60%,rgba(20,10,0,.65));
+}
+
+.image-next{
+    animation:float 2.5s ease-in-out infinite;
+}
+
+@keyframes float{
+    50%{transform:translateY(-7px)}
+}
+
+/* ---------- TARJETAS ---------- */
+
+.section-title{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,6vw,3.6rem);
+    color:#fff0b4;
+    margin-bottom:10px;
+}
+
+.section-sub{
+    text-align:center;
+    color:#d9c19b;
+    margin:0 auto 35px;
+    max-width:650px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.flip-card{
+    min-height:260px;
+    perspective:1200px;
+    cursor:pointer;
+}
+
+.flip-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    min-height:260px;
+    transition:transform .75s cubic-bezier(.2,.8,.2,1);
+    transform-style:preserve-3d;
+}
+
+.flip-card.open .flip-inner{
+    transform:rotateY(180deg);
+}
+
+.face{
+    position:absolute;
+    inset:0;
+    border-radius:25px;
+    padding:28px;
+    backface-visibility:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border:1px solid rgba(255,220,118,.28);
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.front{
+    background:
+      radial-gradient(circle at top,rgba(255,208,66,.15),transparent 45%),
+      rgba(53,32,11,.78);
+    backdrop-filter:blur(14px);
+}
+
+.back{
+    background:
+      radial-gradient(circle at 50% 0,rgba(255,221,115,.18),transparent 40%),
+      linear-gradient(145deg,#5a3511,#261608);
+    transform:rotateY(180deg);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:15px;
+    animation:float 2.6s ease-in-out infinite;
+}
+
+.card-title{
+    font-family:'Playfair Display',serif;
+    color:#ffe89b;
+    font-size:1.65rem;
+    margin-bottom:10px;
+}
+
+.tap{
+    color:#cbb488;
+    font-size:.88rem;
+    margin-top:12px;
+}
+
+.back p{
+    line-height:1.7;
+    color:#fff2d1;
+}
+
+/* ---------- FLORES INTERACTIVAS ---------- */
+
+.garden{
+    min-height:280px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+
+.flower{
+    border:0;
+    background:none;
+    cursor:pointer;
+    font-size:55px;
+    transform:scale(.25) translateY(80px);
+    opacity:.2;
+    transition:.7s cubic-bezier(.17,.89,.32,1.4);
+    filter:drop-shadow(0 8px 12px rgba(0,0,0,.3));
+}
+
+.flower.bloom{
+    transform:scale(1) translateY(0);
+    opacity:1;
+}
+
+.flower:hover{
+    transform:scale(1.18) rotate(6deg);
+}
+
+/* ---------- MENSAJE ---------- */
+
+.letter{
+    width:min(760px,100%);
+    margin:auto;
+    padding:45px;
+    border-radius:8px 8px 25px 25px;
+    background:
+      linear-gradient(rgba(255,248,214,.97),rgba(255,239,181,.96));
+    color:#5b3517;
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+    transform:rotate(-1deg);
+    position:relative;
+}
+
+.letter:before{
+    content:"🌻";
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:45px;
+}
+
+.letter h2{
+    font-family:'Playfair Display',serif;
+    font-size:2.5rem;
+    margin-bottom:25px;
+}
+
+.letter p{
+    line-height:1.9;
+    font-size:1.03rem;
+    margin-bottom:16px;
+}
+
+.signature{
+    text-align:right;
+    font-family:'Playfair Display',serif;
+    font-size:1.5rem;
+    font-style:italic;
+}
+
+/* ---------- CANCIÓN ---------- */
+
+.player{
+    width:min(650px,100%);
+    margin:auto;
+    padding:35px;
+    border-radius:28px;
+    text-align:center;
+    background:rgba(38,22,7,.82);
+    border:1px solid rgba(255,218,108,.3);
+    box-shadow:0 25px 70px rgba(0,0,0,.4);
+}
+
+.disc{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    margin:0 auto 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:50px;
+    background:
+      radial-gradient(circle,#e7b43c 0 9%,#17120c 10% 28%,#292018 29% 100%);
+    border:3px solid #55442f;
+}
+
+.disc.spin{
+    animation:spin 5s linear infinite;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg)}
+}
+
+.song-title{
+    font-family:'Playfair Display',serif;
+    font-size:2.3rem;
+    color:#ffe99f;
+}
+
+.artist{
+    color:#cbb48d;
+    margin:8px 0 25px;
+}
+
+/* ---------- FINAL ---------- */
+
+.final{
+    text-align:center;
+}
+
+.final-title{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2.6rem,8vw,5.5rem);
+    font-style:italic;
+    color:#fff0af;
+}
+
+.big-heart{
+    font-size:65px;
+    margin:20px;
+    display:inline-block;
+    animation:heart 1.2s infinite;
+}
+
+@keyframes heart{
+    50%{transform:scale(1.18)}
+}
+
+.actions{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+/* ---------- CORAZONES AL TOCAR ---------- */
+
+.pop-heart{
+    position:fixed;
+    pointer-events:none;
+    z-index:200;
+    font-size:25px;
+    animation:heartPop 1.3s forwards;
+}
+
+@keyframes heartPop{
+    to{
+        transform:translateY(-120px) scale(1.7) rotate(20deg);
+        opacity:0;
+    }
+}
+
+/* ---------- MÓVIL ---------- */
+
+@media(max-width:700px){
+    .screen{
+        padding:70px 16px 30px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .flip-card,
+    .flip-inner{
+        min-height:245px;
+    }
+
+    .letter{
+        padding:35px 23px;
+    }
+
+    .music{
+        top:12px;
+        right:12px;
+        padding:9px 13px;
+        font-size:.85rem;
+    }
+
+    .image-card{
+        border-radius:18px;
+    }
+
+    .image-overlay{
+        padding:18px;
+    }
+}
 </style>
 </head>
+
 <body>
-<div class="bg"></div><div class="glow"></div><div class="petals" id="petals"></div>
-<button class="music" id="musicBtn" onclick="musicNote()">♫ Jamás</button>
-<section class="screen active" id="s0"><div class="card"><div class="sun">🌻</div><div class="eyebrow">Una pequeña sorpresa</div><h1 class="title">Hola, Jhoimy 💛</h1><p class="sub">Hay detalles que no necesitan una fecha enorme para sentirse especiales.<br>Hoy quería dejarte uno.</p><button class="btn" onclick="start()">Abrir mi sorpresa ✨</button><div class="mini">Toca para comenzar</div></div></section>
-<section class="screen" id="s1"><div class="card"><img class="hero-img" src="jhoimy-diseno-final.png" alt="Sorpresa de flores amarillas para Jhoimy con topo, gatitos y patito"><div class="eyebrow">Para ti</div><p class="message">Quizá hoy no pueda darte todas las <span class="highlight">flores amarillas</span> que mereces, pero quería encontrar una forma diferente de hacerte llegar unas.</p><button class="btn" onclick="next(2)">Continuar 🌻</button></div></section>
-<section class="screen" id="s2"><div class="card"><div class="progress"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><p class="message">Espero que este pequeño detalle te saque una sonrisa.</p><p class="sub">Aunque hemos hablado poco, desde aquella primera vez que conversamos hubo algo que se quedó conmigo. Quizá fue tu forma de ser, tu compañía o simplemente lo bonito de aquel momento.</p><button class="btn" onclick="next(3)">Siguiente 💛</button></div></section>
-<section class="screen" id="s3"><div class="card"><div class="progress"><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></div><p class="message">Y hablando de sonrisas… tienes una de esas capaces de <span class="highlight">embellecer hasta los mares más turbulentos.</span> ✨</p><p class="sub">Tus ojitos chinos, tu cabello lacio y esa sonrisa tan tuya hacen que tengas algo difícil de explicar, pero muy fácil de recordar.</p><button class="btn" onclick="next(4)">Seguir 🌼</button></div></section>
-<section class="screen" id="s4"><div class="card"><div class="progress"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></div><p class="message">Todavía nos queda mucho por conocernos, y quizá eso sea parte de lo bonito.</p><p class="sub">No quiero llenar estas palabras de grandes promesas; simplemente quería aprovechar este día para regalarte algo diferente y decirte algo que sí tengo claro:</p><p class="message highlight">Me alegra mucho haberte conocido. 💛</p><button class="btn" onclick="next(5);burst()">Recibir mis flores 🌻</button></div></section>
-<section class="screen" id="s5"><div class="card"><div class="sun">🌻🌼🌻</div><h2 class="final-title">Aquí están las tuyas, Jhoimy.</h2><p class="sub">Tal vez no puedas sostenerlas con tus manos, pero fueron hechas pensando en ti.</p><p class="message">Que nunca te falten razones para sonreír, momentos que llenen tu alma y personas que sepan valorar lo especial que eres.</p><div class="signature">Con cariño,<br><span class="highlight">Jayro. 💛</span></div><button class="btn" onclick="restart()">Volver a verlo ✨</button></div></section>
+
+<div class="bg"></div>
+<div class="glow"></div>
+<div id="petals"></div>
+
+<audio id="audio" loop preload="auto">
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" id="musicBtn" onclick="toggleMusic()">
+    🎵 Jamás
+</button>
+
+<!-- PANTALLA 0 -->
+
+<section class="screen active" id="s0">
+    <div class="hero">
+
+        <div class="sun">🌻</div>
+
+        <div class="eyebrow">Una pequeña sorpresa para ti</div>
+
+        <h1 class="title">
+            Hola,<br>Jhoimy 💛
+        </h1>
+
+        <p class="subtitle">
+            Quizá hoy no pueda darte todas las flores amarillas que mereces,
+            pero quería encontrar una forma diferente de hacerte llegar unas.
+            Hay pequeños detalles que pueden viajar incluso cuando la distancia
+            se interpone.
+        </p>
+
+        <button class="btn" onclick="startSurprise()">
+            Comenzar 🌻
+        </button>
+
+    </div>
+</section>
+
+<!-- PANTALLA 1: IMAGEN -->
+
+<section class="screen" id="s1">
+    <div class="container">
+
+        <div class="image-card" onclick="makeHearts(event)">
+            <img src="jhoimy-diseño-final.png"
+                 alt="Una sorpresa de flores amarillas para Jhoimy">
+
+            <div class="image-overlay">
+                <button class="btn image-next" onclick="event.stopPropagation();show(2)">
+                    Descubrir la sorpresa 💛
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PANTALLA 2: TARJETAS -->
+
+<section class="screen" id="s2">
+<div class="container">
+
+    <h2 class="section-title">Hay algunas cosas para ti… 🌻</h2>
+
+    <p class="section-sub">
+        Pero no te las voy a mostrar tan fácilmente.
+        Toca cada tarjeta para descubrir lo que guarda.
+    </p>
+
+    <div class="cards">
+
+        <div class="flip-card" onclick="flipCard(this,event)">
+            <div class="flip-inner">
+
+                <div class="face front">
+                    <div class="icon">💌</div>
+                    <div class="card-title">Un pequeño mensaje</div>
+                    <div class="tap">Tócame para abrir 💛</div>
+                </div>
+
+                <div class="face back">
+                    <div class="icon">✨</div>
+                    <div class="card-title">Para Jhoimy</div>
+                    <p>
+                        Hemos hablado poco, pero aquella primera vez que hablé contigo
+                        se me quedó marcada de una manera bonita.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="flip-card" onclick="flipCard(this,event)">
+            <div class="flip-inner">
+
+                <div class="face front">
+                    <div class="icon">🌻</div>
+                    <div class="card-title">Tus flores</div>
+                    <div class="tap">Hay algo detrás…</div>
+                </div>
+
+                <div class="face back">
+                    <div class="icon">💐</div>
+                    <div class="card-title">Flores amarillas</div>
+                    <p>
+                        Tal vez no puedas sostenerlas con tus manos,
+                        pero fueron escogidas pensando especialmente en ti.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="flip-card" onclick="flipCard(this,event)">
+            <div class="flip-inner">
+
+                <div class="face front">
+                    <div class="icon">😊</div>
+                    <div class="card-title">Algo que noté</div>
+                    <div class="tap">¿Quieres saber qué es?</div>
+                </div>
+
+                <div class="face back">
+                    <div class="icon">💛</div>
+                    <div class="card-title">Tu sonrisa</div>
+                    <p>
+                        Tienes una sonrisa de esas capaces de embellecer
+                        hasta los mares más turbulentos.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="flip-card" onclick="flipCard(this,event)">
+            <div class="flip-inner">
+
+                <div class="face front">
+                    <div class="icon">🎵</div>
+                    <div class="card-title">También hay una canción</div>
+                    <div class="tap">Toca para descubrirla</div>
+                </div>
+
+                <div class="face back">
+                    <div class="icon">🎶</div>
+                    <div class="card-title">Jamás</div>
+                    <p>
+                        Eddie Santiago<br><br>
+                        Que la música también diga un poquito
+                        de lo que a veces cuesta poner en palabras.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <button class="btn" onclick="show(3)">
+            Continuar 🌻
+        </button>
+    </div>
+
+</div>
+</section>
+
+<!-- PANTALLA 3: JARDÍN -->
+
+<section class="screen" id="s3">
+<div class="container">
+
+    <h2 class="section-title">
+        Estas sí son para ti 🌻
+    </h2>
+
+    <p class="section-sub">
+        Toca las flores para hacerlas florecer.
+    </p>
+
+    <div class="garden">
+
+        <button class="flower" onclick="bloom(this,event)">🌻</button>
+        <button class="flower" onclick="bloom(this,event)">🌼</button>
+        <button class="flower" onclick="bloom(this,event)">🌻</button>
+        <button class="flower" onclick="bloom(this,event)">🌼</button>
+        <button class="flower" onclick="bloom(this,event)">🌻</button>
+        <button class="flower" onclick="bloom(this,event)">🌼</button>
+        <button class="flower" onclick="bloom(this,event)">🌻</button>
+
+    </div>
+
+    <p class="section-sub" id="gardenText">
+        Hay flores que necesitan un pequeño toque para aparecer. 💛
+    </p>
+
+    <div class="actions">
+        <button class="btn" onclick="show(4)">
+            Hay algo más 💌
+        </button>
+    </div>
+
+</div>
+</section>
+
+<!-- PANTALLA 4: CARTA -->
+
+<section class="screen" id="s4">
+<div class="container">
+
+    <div class="letter">
+
+        <h2>Para ti, Jhoimy 💛</h2>
+
+        <p>
+            Quizá hoy no pueda darte todas las flores amarillas que mereces,
+            pero quería encontrar una forma diferente de hacerte llegar unas.
+            Espero que este pequeño detalle te saque una sonrisa.
+        </p>
+
+        <p>
+            Aunque hemos hablado poco, desde aquella primera vez que conversé
+            contigo hubo algo que se quedó conmigo. Tienes una forma muy bonita
+            de hacer sentir tu compañía.
+        </p>
+
+        <p>
+            Y tu sonrisa… de esas que podrían embellecer hasta los mares
+            más turbulentos.
+        </p>
+
+        <p>
+            No quería dejar pasar este día sin regalarte, aunque fuera
+            de esta manera, unas flores pensadas especialmente para ti. 🌻
+        </p>
+
+        <div class="signature">
+            Con cariño,<br>
+            Jayro 💛
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <button class="btn" onclick="show(5)">
+            Una última cosita… ✨
+        </button>
+    </div>
+
+</div>
+</section>
+
+<!-- PANTALLA 5: CANCIÓN -->
+
+<section class="screen" id="s5">
+<div class="container">
+
+    <div class="player">
+
+        <div class="disc" id="disc">
+            💛
+        </div>
+
+        <div class="song-title">
+            Jamás
+        </div>
+
+        <div class="artist">
+            Eddie Santiago
+        </div>
+
+        <p class="section-sub">
+            Esta canción estuvo acompañando toda esta pequeña sorpresa.
+        </p>
+
+        <button class="btn" onclick="toggleMusic()">
+            ▶ / ❚❚ Música
+        </button>
+
+    </div>
+
+    <div class="actions">
+        <button class="btn" onclick="show(6);burst(35)">
+            Ver el final 💛
+        </button>
+    </div>
+
+</div>
+</section>
+
+<!-- PANTALLA 6: FINAL -->
+
+<section class="screen" id="s6">
+<div class="container final">
+
+    <div class="eyebrow">
+        Y antes de terminar…
+    </div>
+
+    <div class="big-heart">💛</div>
+
+    <h2 class="final-title">
+        Espero haberte<br>
+        sacado una sonrisa,<br>
+        Jhoimy.
+    </h2>
+
+    <p class="subtitle">
+        Porque algunas personas llegan sin hacer mucho ruido
+        y aun así consiguen quedarse en un lugar bonito de nuestros recuerdos.
+        <br><br>
+        Estas flores son tuyas. 🌻
+    </p>
+
+    <div class="actions">
+
+        <button class="btn" onclick="burst(50)">
+            🌻 Más flores
+        </button>
+
+        <button class="btn" onclick="restart()">
+            ↻ Volver a verla
+        </button>
+
+    </div>
+
+</div>
+</section>
+
+
 <script>
-let current=0;function show(n){document.getElementById('s'+current).classList.remove('active');current=n;document.getElementById('s'+n).classList.add('active');window.scrollTo(0,0)}
-function start(){show(1);burst(18)} function next(n){show(n);burst(8)} function restart(){show(0);burst(14)}
-function flower(){const p=document.createElement('span');p.className='petal';p.textContent=['🌼','🌻','💛','✨'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'vw';p.style.setProperty('--drift',(Math.random()*180-90)+'px');p.style.animationDuration=(5+Math.random()*5)+'s';p.style.fontSize=(14+Math.random()*18)+'px';document.getElementById('petals').appendChild(p);setTimeout(()=>p.remove(),10000)}
-function burst(n=12){for(let i=0;i<n;i++)setTimeout(flower,i*90)} setInterval(()=>{if(current>0)flower()},900);
-function musicNote(){alert('Música elegida: “Jamás” — Eddie Santiago.\n\nPara publicarla con música, agrega un archivo de audio que tengas autorizado como “jamas.mp3” y se puede activar desde el primer toque.');}
+
+let current = 0;
+let playing = false;
+let bloomed = 0;
+
+const audio = document.getElementById("audio");
+const musicBtn = document.getElementById("musicBtn");
+const disc = document.getElementById("disc");
+
+/* CAMBIAR PANTALLA */
+
+function show(n){
+
+    document.getElementById("s"+current).classList.remove("active");
+
+    current = n;
+
+    document.getElementById("s"+current).classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    burst(8);
+}
+
+
+/* COMENZAR */
+
+function startSurprise(){
+
+    audio.volume = 0.55;
+
+    audio.play().then(()=>{
+        playing = true;
+        updateMusic();
+    }).catch(()=>{
+        playing = false;
+    });
+
+    burst(25);
+
+    setTimeout(()=>{
+        show(1);
+    },350);
+}
+
+
+/* MÚSICA */
+
+function toggleMusic(){
+
+    if(audio.paused){
+
+        audio.play().then(()=>{
+            playing = true;
+            updateMusic();
+        });
+
+    }else{
+
+        audio.pause();
+        playing = false;
+        updateMusic();
+
+    }
+}
+
+function updateMusic(){
+
+    if(!audio.paused){
+
+        musicBtn.innerHTML = "⏸ Jamás";
+        musicBtn.classList.add("playing");
+
+        if(disc){
+            disc.classList.add("spin");
+        }
+
+    }else{
+
+        musicBtn.innerHTML = "▶ Jamás";
+        musicBtn.classList.remove("playing");
+
+        if(disc){
+            disc.classList.remove("spin");
+        }
+    }
+}
+
+
+/* TARJETAS */
+
+function flipCard(card,event){
+
+    card.classList.toggle("open");
+
+    makeHearts(event);
+
+    burst(5);
+}
+
+
+/* FLORES */
+
+function bloom(el,event){
+
+    if(!el.classList.contains("bloom")){
+
+        el.classList.add("bloom");
+
+        bloomed++;
+
+        makeHearts(event);
+
+        burst(4);
+    }
+
+    const text = document.getElementById("gardenText");
+
+    if(bloomed >= 7){
+
+        text.innerHTML =
+        "Ahora sí… un pequeño jardín de flores amarillas para ti, Jhoimy. 🌻💛";
+
+        burst(25);
+    }
+}
+
+
+/* CORAZONES AL TOCAR */
+
+function makeHearts(event){
+
+    const x = event.clientX || window.innerWidth/2;
+    const y = event.clientY || window.innerHeight/2;
+
+    for(let i=0;i<5;i++){
+
+        const h = document.createElement("span");
+
+        h.className = "pop-heart";
+
+        h.textContent =
+        ["💛","✨","🌻"][Math.floor(Math.random()*3)];
+
+        h.style.left =
+        (x + Math.random()*50 - 25) + "px";
+
+        h.style.top =
+        (y + Math.random()*30 - 15) + "px";
+
+        document.body.appendChild(h);
+
+        setTimeout(()=>{
+            h.remove();
+        },1300);
+    }
+}
+
+
+/* PÉTALOS */
+
+function flower(){
+
+    const p = document.createElement("span");
+
+    p.className = "petal";
+
+    p.textContent =
+    ["🌻","🌼","💛","✨"][Math.floor(Math.random()*4)];
+
+    p.style.left =
+    Math.random()*100 + "vw";
+
+    p.style.fontSize =
+    (13 + Math.random()*16) + "px";
+
+    p.style.opacity =
+    .3 + Math.random()*.5;
+
+    p.style.animationDuration =
+    (5 + Math.random()*5) + "s";
+
+    document.getElementById("petals").appendChild(p);
+
+    setTimeout(()=>{
+        p.remove();
+    },10000);
+}
+
+function burst(n=12){
+
+    for(let i=0;i<n;i++){
+
+        setTimeout(()=>{
+            flower();
+        },i*70);
+
+    }
+}
+
+
+/* REINICIAR */
+
+function restart(){
+
+    document
+    .querySelectorAll(".flip-card")
+    .forEach(card=>{
+        card.classList.remove("open");
+    });
+
+    document
+    .querySelectorAll(".flower")
+    .forEach(f=>{
+        f.classList.remove("bloom");
+    });
+
+    bloomed = 0;
+
+    document.getElementById("gardenText").innerHTML =
+    "Hay flores que necesitan un pequeño toque para aparecer. 💛";
+
+    show(0);
+
+    burst(20);
+}
+
+
+/* PÉTALOS AMBIENTALES */
+
+setInterval(()=>{
+
+    if(current !== 0){
+        flower();
+    }
+
+},1100);
+
+
+/* SINCRONIZAR MÚSICA */
+
+audio.addEventListener("play",updateMusic);
+audio.addEventListener("pause",updateMusic);
+
 </script>
-</body></html>
+
+</body>
+</html>
